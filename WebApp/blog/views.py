@@ -6,9 +6,10 @@ from django.http import HttpResponse
 # handle the traffic
 
 # Home page
-def home(requset):
-    return HttpResponse('<h1>Blog home</h1>')
+def home(request):
+    # return HttpResponse('<h1>Blog home</h1>')
+    return render(request, 'blog/home.html')
 
 # hAbout page
-def about(requset):
+def about(request):
     return HttpResponse('<h1>Blog about</h1>')
