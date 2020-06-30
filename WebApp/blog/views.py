@@ -35,4 +35,4 @@ def home(request):
 # hAbout page
 def about(request):
     # return HttpResponse('<h1>Blog about</h1>')
-    return render(request, 'blog/about.html')
+    return render(request, 'blog/about.html', {'title': 'About'})
