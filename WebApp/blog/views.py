@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 #HTTP response
-from django.http import HttpResponse
+# from django.http import HttpResponse
 
 # handle the traffic
 
@@ -12,4 +12,5 @@ def home(request):
 
 # hAbout page
 def about(request):
-    return HttpResponse('<h1>Blog about</h1>')
+    # return HttpResponse('<h1>Blog about</h1>')
+    return render(request, 'blog/about.html')
