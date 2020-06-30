@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,6 +21,12 @@
       crossorigin="anonymous"
     />
 
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'blog/css' %}"
+    />
+    
     {% if title %}
     <title>Djang Blog - {{ title }}</title>
     {% else %}
