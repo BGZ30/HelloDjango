@@ -6,22 +6,6 @@ from .models import Post
 
 # handle the traffic
 
-# Adding some dummy data
-posts = [
-    {
-        'author': 'Bassant',
-        'title': 'Blog Post 1',
-        'content': 'First post content',
-        'date_posted': 'June 30, 2020'
-    },
-    {
-        'author': 'Maisa',
-        'title': 'Blog Post 2',
-        'content': 'Second post content',
-        'date_posted': 'June 30, 2020'
-    }
-]
-
 # Home page
 def home(request):
 
