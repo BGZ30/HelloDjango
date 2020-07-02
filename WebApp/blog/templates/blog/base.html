@@ -28,9 +28,9 @@
     />
     
     {% if title %}
-    <title>Djang Blog - {{ title }}</title>
+    <title>Django Blog - {{ title }}</title>
     {% else %}
-    <title>Djang Blog</title>
+    <title>Django Blog</title>
     {% endif %}
   </head>
   <body>
@@ -67,6 +67,13 @@
     <main role="main" class="container">
       <div class="row">
         <div class="col-md-8">
+          {% if messages %}
+            {% for message in messgaes %}
+              <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
           {% block content %}{% endblock %}
         </div>
         <div class="col-md-4">
