@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic import ListView
 from .models import Post
 
 #HTTP response
@@ -16,6 +17,10 @@ def home(request):
 
     # return HttpResponse('<h1>Blog home</h1>')
     return render(request, 'blog/home.html', context)
+
+class PostListView(ListView):
+    model = Post
+
 
 # hAbout page
 def about(request):
