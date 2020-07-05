@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 # from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages  # to show a flash message
 from django.contrib.auth.decorators import login_required
-from .forms import UserRegisterForm
+from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 
 
 def register(request):
@@ -25,4 +25,17 @@ def register(request):
 
 @login_required
 def profile(request):
-    return render(request, 'users/profile.html')
+
+    # Create the forms
+    u_form = UserUpdateForm()
+    p_form = ProfileUpdateForm()
+
+    # pass them to the template, first create a context, then pass it to the template
+    context = {
+        'u_form' : u_form,
+        'p_form' : p_form
+    }
+
+    # pass the context to be able to access it 
+    return render(request, 'users/profile.html', context)
+
