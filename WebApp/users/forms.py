@@ -25,6 +25,6 @@ class UserUpdateForm(forms.ModelForm):
         # fields shown on the form
         fields = ['username', 'email']
 
-class ProfileUpdateForm(form.ModelForm):
+class ProfileUpdateForm(forms.ModelForm):
     model = Profile
     fields = ['image']
